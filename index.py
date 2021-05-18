@@ -1,5 +1,6 @@
 import requests
 import bs4
+import re
 
 
 url= "https://prefeitura.pbh.gov.br/saude/licitacao/pregao-eletronico-151-2020"
@@ -11,4 +12,5 @@ print(soup.select(".lbl-licitacao"))
 
 for links in soup.find_all('a'):
     link = links.get('href')
+    
     print(link)
